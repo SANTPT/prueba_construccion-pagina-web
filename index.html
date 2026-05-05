@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>SMARTBOLI</title>
+    <title>SMARTBOLI - Mi Proyecto</title>
 </head>
 <body>
     <header>
@@ -12,41 +12,95 @@
         <p>El bolígrafo inteligente con aplicación que revoluciona la forma en que tomas notas.</p>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Características</a></li>
-                <li><a href="#">Precio</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#educacion">Parte Educativa</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#precio">Precio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-        <img src="" alt="">
     </header>
-    <p>Combina la experiencia tradicional del papel con la innovación de la tecnología, permitiendo a los usuarios guardar, editar y compartir sus notas de manera digital y mejorar la experiencia de aprendizaje.</p>
-    <img src="" alt="">  
-    <section>
-        <h2>Características</h2>
-        <ul>
-            <li>Toma notas físicas en papel</li>
-            <li>Guarda tus notas en formato digital</li>
-            <li>Edita tus notas</li>
-            <li>Comparte tus notas mediante enlace</li>
-            <li>Motor de IA que te ayuda a ampliar tus conocimientos</li>
-            <li>Cursos relacionados al tema</li>
-            <li>Ejercicios prácticos y didácticos</li>
-            <li>Consejos y recomendaciones personalizados</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Precio</h2>
-        <ul>
-            <li>Precio: 500€</li>
-        </ul>
-    </section>
-    <section>
+
+    <main>
+        <section id="inicio" class="seccion-principal">
+            <h2>¿Qué es Smartboli?</h2>
+            <p>Combina la experiencia tradicional del papel con la innovación de la tecnología, permitiendo a los usuarios guardar, editar y compartir sus notas de manera digital y mejorar la experiencia de aprendizaje.</p>
+            <br>
+            <img src="450_1000.jpg" alt="Imagen del Smartboli" width="400">
+        </section>
+
+        <section id="educacion" class="seccion-educativa">
+            <h2>Plataforma Educativa (Inteligencia Artificial)</h2>
+            <p>El bolígrafo cuenta con un motor de IA que te ayuda a aprender más rápido.</p>
+            <br>
+            <div class="caja-educativa">
+                <h3>Resúmenes Automáticos</h3>
+                <p>La IA lee lo que escribes y te hace un resumen corto con lo más importante.</p>
+            </div>
+            <div class="caja-educativa">
+                <h3>Generación de Cuestionarios</h3>
+                <p>Crea preguntas de práctica sobre tus propios apuntes para estudiar para exámenes.</p>
+            </div>
+            <div class="caja-educativa">
+                <h3>Búsqueda Contextual</h3>
+                <p>Toca una palabra con el boli para buscar su definición en internet o recomendarte cursos.</p>
+            </div>
+        </section>
+
+        <section id="caracteristicas">
+            <h2>Características</h2>
+            <ul>
+                <li>Toma notas físicas en papel</li>
+                <li>Guarda tus notas en formato digital</li>
+                <li>Edita tus notas en la app</li>
+                <li>Comparte tus notas mediante enlace</li>
+                <li>Motor de IA educativo</li>
+            </ul>
+        </section>
+
+        <section id="precio">
+            <h2>Precio</h2>
+            <p class="precio-destacado">Precio: 500€</p>
+        </section>
+        <section>
+            <form action="/procesar-datos" method="get">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="0" max="120"><br><br>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required minlength="6"><br><br>
+                <label for="url">URL:</label>
+                <input type="url" id="url" name="url"><br><br>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha"><br><br>
+                <label for="color">Color favorito:</label>
+                <input type="color" id="color" name="color"><br><br>
+                <label for="rango">Rango:</label>
+                <input type="range" id="rango" name="rango" min="0" max="100"><br><br>
+                <label for="comentarios">Comentarios:</label><br>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
+                <input type="checkbox" id="politica" name="politica" required>
+                <label for="politica">Acepto la política de privacidad</label><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <footer id="contacto">
         <h2>Contacto</h2>
+        <p>Ponte en contacto con nosotros para comprar el tuyo:</p>
+        <br>
         <ul>
-            <li>Email: [EMAIL_ADDRESS]</li>
-            <li>Teléfono: +123456789</li>
+            <li>Email: info@smartboli.com</li>
+            <li>Teléfono: +123 456 789</li>
         </ul>
-    </section>
+        <br>
+        <p><small>Proyecto creado para clase de desarrollo web.</small></p>
+    </footer>
 </body>
 </html>
+
+

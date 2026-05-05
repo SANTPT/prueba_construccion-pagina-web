@@ -1,6 +1,3 @@
-
-
-
 # SMARTBOLI
 
 **Nombre del autor:** Santiago Patiño Torres

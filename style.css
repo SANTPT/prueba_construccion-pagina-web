@@ -39,6 +39,7 @@ header h1 {
 }
 
 nav ul {
+    position: -webkit-sticky;
     list-style-type: none;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 0.9375rem;
@@ -340,7 +341,6 @@ input[type="submit"] {
     }
 
     nav ul li a {
-        display: block;
         padding: 0.8rem;
     }
 

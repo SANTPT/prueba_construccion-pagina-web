@@ -34,6 +34,7 @@ header h1 {
     font-size: 42px;
     margin-bottom: 15px;
     letter-spacing: 1px;
+    font-family: 'Playwrite NZ Guides', cursive;
 }
 
 nav ul {
@@ -185,7 +186,7 @@ form label {
     letter-spacing: 0.5px;
 }
 
-input:not([type="submit"]):not([type="checkbox"]), select, textarea {
+input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), select, textarea {
     width: 100%;
     background-color: #0d1323;
     color: var(--color-texto);
@@ -198,7 +199,8 @@ input:not([type="submit"]):not([type="checkbox"]), select, textarea {
     transition: all 0.3s ease;
 }
 
-.checkbox-container label {
+.checkbox-container label,
+.radio-button-container label {
     margin-bottom: 0;
     color: var(--color-texto);
     text-transform: none;
@@ -206,6 +208,13 @@ input:not([type="submit"]):not([type="checkbox"]), select, textarea {
     font-size: 0.95rem;
     letter-spacing: normal;
     cursor: pointer;
+}
+
+
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
+    background: linear-gradient(135deg, #0ea5e9, #0369a1);
 }
 
 input[type="submit"] {
@@ -224,13 +233,6 @@ input[type="submit"] {
     box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
     margin-top: 10px;
 }
-
-input[type="submit"]:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
-    background: linear-gradient(135deg, #0ea5e9, #0369a1);
-}
-
 .radio-button-container {
     display: flex;
     gap: 15px;
@@ -264,4 +266,18 @@ input[type="submit"]:hover {
 .iconos-sociales img:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: var(--color-secondary);
+}
+
+.creditos-proyecto {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.creditos-proyecto p {
+    color: #e2e8f0;
+    margin: 8px 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
 }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>SMARTBOLI - Mi Proyecto</title>
 </head>
+
 <body>
     <header>
         <h1>SMARTBOLI</h1>
@@ -24,9 +26,11 @@
     <main>
         <section id="inicio" class="seccion-principal">
             <h2>¿Qué es Smartboli?</h2>
-            <p>Combina la experiencia tradicional del papel con la innovación de la tecnología, permitiendo a los usuarios guardar, editar y compartir sus notas de manera digital y mejorar la experiencia de aprendizaje.</p>
+            <p>Combina la experiencia tradicional del papel con la innovación de la tecnología, permitiendo a los
+                usuarios guardar, editar y compartir sus notas de manera digital y mejorar la experiencia de
+                aprendizaje.</p>
             <br>
-            <img src="450_1000.jpg" alt="Imagen del Smartboli" width="400">
+            <img src="/images/450_1000.jpg" alt="Imagen del Smartboli" width="400">
         </section>
 
         <section id="educacion" class="seccion-educativa">
@@ -95,11 +99,19 @@
 
                 <label for="comentarios">¿Qué te gustaría preguntar en la asesoría?</label>
                 <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cuéntanos un poco sobre tus dudas o necesidades específicas..."></textarea>
-
+                
+                <p>¿Deseas recibir información sobre novedades de Smartboli?</p>
+                <div class="radio-button-container">
+                    <input type="radio" id="si" name="opcion" value="si" required>
+                    <label for="si">Sí</label>
+                    <input type="radio" id="no" name="opcion" value="no" required>
+                    <label for="no">No</label>
+                </div>
                 <div class="checkbox-container">
                     <input type="checkbox" id="privacidad" name="privacidad" required>
                     <label for="privacidad">Acepto la <a href="#contacto" style="color: var(--color-secondary);">política de privacidad</a> para que me contacten.</label>
                 </div>
+
 
                 <input type="submit" value="Solicitar Asesoría">
             </form>
@@ -107,17 +119,25 @@
     </main>
 
     <footer id="contacto">
-        <h2>Contacto</h2>
-        <p>Ponte en contacto con nosotros para comprar el tuyo:</p>
-        <br>
-        <ul>
-            <li>Email: info@smartboli.com</li>
-            <li>Teléfono: +123 456 789</li>
-        </ul>
-        <br>
-        <p><small>Proyecto creado para clase de desarrollo web.</small></p>
+        <div class="redes-sociales">
+            <h2>Nuestras redes sociales</h2>
+            <div class="iconos-sociales">
+                <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><img src="/images/Facebook_iOS_2019_icon_padded.webp" alt="facebook"></a>
+                <a href="https://x.com/?lang=es" target="_blank"><img src="/images/x.svg" alt="x"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="/images/Instagram_logo_2022.svg" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <div class="contactanos">
+            <h2>Contacto</h2>
+            <p>Ponte en contacto con nosotros para comprar el tuyo:</p> 
+            <ul>
+                <li>Email: info@smartboli.com</li>
+                <li>Teléfono: +123 456 789</li>
+            </ul>
+            <p><small>Proyecto creado para clase de desarrollo web.</small></p>
+        </div>
     </footer>
 </body>
+
 </html>
-
-

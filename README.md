@@ -10,4 +10,4 @@ Dentro del desarrollo del la plataforma o pagina web el usuario podra ver todas 
 
 ## Descripción
 
-- Smartboli busca implementar una experiencia de usuario integral, que combine la tradicionalidad del papel con la innovación de la tecnología, permitiendo a los usuarios guardar, editar y compartir sus notas de manera digital y mejorar la experiencia de aprendizaje.
+- Smartboli busca implementar una experiencia de usuario integral, que combine la tradicionalidad del papel con la innovación de la tecnología, permitiendo a los usuarios guardar, editar y compartir sus notas de manera digital y mejorar la experiencia de aprendizaje.# prueba_construccion-pagina-web

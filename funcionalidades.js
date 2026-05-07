@@ -108,51 +108,19 @@ window.addEventListener("click", function(e) {
 
 // Deshabilitar el boton de inicio de sesion hasta que se acepte la politica de privacidad
 
-casilla.addEventListener("change", aceptacionWeb)
-
-function aceptacionWeb() {
-    
-
-    let estadoCasilla=casilla.checked;
-
-    
-    switch (estadoCasilla) {
-
-        case true:   boton1.disabled=false;
-            
-            break;
-        case false:
-                        boton1.disabled=true;
-            break;
-
-        default:
-            break;
+// Función genérica para vincular cualquier casilla con cualquier botón
+function vincularPrivacidad(checkboxItem, buttonItem) {
+    if (checkboxItem && buttonItem) {
+        checkboxItem.addEventListener("change", (e) => {
+            buttonItem.disabled = !e.target.checked;
+        });
     }
-
-
-};
-
-
-// Deshabilitar el boton de solicitar asesoria hasta que se acepte la politica de privacidad
-
-const casillaAsesoria = document.getElementById("privacidad");
-const botonAsesoria = document.getElementById("btnAsesoria");
-
-if (casillaAsesoria && botonAsesoria) {
-    casillaAsesoria.addEventListener("change", aceptacionAsesoria);
 }
 
-function aceptacionAsesoria() {
-    let estadoCasilla = casillaAsesoria.checked;
+// Uso 1: Inicio de sesión (asumiendo que 'casilla' y 'boton1' ya están definidos)
+vincularPrivacidad(casilla, boton1);
 
-    switch (estadoCasilla) {
-        case true:
-            botonAsesoria.disabled = false;
-            break;
-        case false:
-            botonAsesoria.disabled = true;
-            break;
-        default:
-            break;
-    }
-};
+// Uso 2: Asesoría
+const casillaAsesoria = document.getElementById("privacidad");
+const botonAsesoria = document.getElementById("btnAsesoria");
+vincularPrivacidad(casillaAsesoria, botonAsesoria);

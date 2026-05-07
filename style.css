@@ -53,6 +53,23 @@ nav ul {
     margin: 0;
 }
 
+.date {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.fecha-demo {
+    margin: 0;
+    font-weight: bold;
+    color: var(--color-secondary);
+    min-width: 6rem;
+    text-align: left;
+}
+
 .nav-login {
     position: absolute;
     top: 1.25rem;
@@ -419,4 +436,235 @@ input[type="submit"] {
         width: 2.8rem;
         height: 2.8rem;
     }
+}
+
+/* Estilos para el Modal de Login */
+.login-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px); /* Toque premium de desenfoque */
+}
+
+.modal-content {
+    background-color: var(--color-primary);
+    padding: 2.5rem 3rem;
+    border-radius: 1.25rem;
+    border: 0.125rem solid var(--color-borde);
+    position: relative;
+    max-width: 25rem;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.8);
+    text-align: left;
+}
+
+.close-btn {
+    color: #94a3b8;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--color-secondary);
+}
+
+/* Clases de utilidad para el logueo */
+.desaparecer {
+    display: none !important;
+}
+
+.aparecer {
+    display: block !important;
+}
+
+/* Regla especial para que el contenedor principal del modal mantenga flex cuando aparece */
+div#login.aparecer {
+    display: flex !important;
+}
+
+/* --- ESTILIZANDO EL CONTENIDO HTML ORIGINAL --- */
+
+/* Ocultar las etiquetas <p> vacías innecesarias del html original */
+#login section#uno > p:empty {
+    display: none;
+}
+
+#login section#uno label {
+    display: block;
+    font-weight: bold;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Inputs de texto */
+#login section#uno input[type="text"],
+#login section#uno input[type="password"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid var(--color-borde);
+    background-color: #0d1323;
+    color: var(--color-texto);
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#login section#uno input[type="text"]:focus,
+#login section#uno input[type="password"]:focus {
+    border-color: var(--color-secondary);
+    outline: none;
+    box-shadow: 0 0 0.5rem rgba(56, 189, 248, 0.3);
+}
+
+/* Botón ver clave */
+#login section#uno span {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#login section#uno span label {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--color-texto);
+    font-weight: normal;
+}
+
+#login button#btn2 {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    transition: background-color 0.3s;
+}
+
+#login button#btn2:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#login button#btn2 img {
+    filter: invert(0.8); /* Aclara la imagen original para que se vea en el fondo oscuro */
+}
+
+/* Texto explicativo */
+#login section#uno > p:not(:empty) {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+/* Fila de T&C Checkbox */
+#login section#uno input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 0.5rem;
+    accent-color: var(--color-secondary);
+    transform: scale(1.1);
+}
+
+#login section#uno input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+    color: var(--color-texto);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+#login section#uno input[type="checkbox"] + label a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#login section#uno input[type="checkbox"] + label a:hover {
+    text-decoration: underline;
+}
+
+/* Botón principal */
+#login button#btn1 {
+    width: 100%;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-weight: bold;
+    padding: 0.875rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+#login button#btn1:disabled {
+    background-color: var(--color-borde);
+    color: rgba(255, 255, 255, 0.4);
+    cursor: not-allowed;
+}
+
+#login button#btn1:not(:disabled):hover {
+    background-color: #0ea5e9;
+    box-shadow: 0 0.25rem 1rem rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Mensajes de Resultado */
+#login section#dos, #login section#tres {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#login .rojo {
+    color: #ef4444;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#login .verde {
+    color: #22c55e;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#login button#btn3 {
+    background-color: #22c55e;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1rem;
+}
+
+#login button#btn3:hover {
+    background-color: #16a34a;
 }

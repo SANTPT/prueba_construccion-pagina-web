@@ -6,7 +6,7 @@
 
 ## Descripción
 
-- En este trabajo que se realiza como evidencia de mi formacion como estudiante de programacion web, se desarrolla una pagina web estatica usando HTML y CSS, Para este caso practico se descidio realizar la pagina de ventas de salida de mercado de el smartboli, un boligrafo inteligente.
+- En este trabajo que se realiza como evidencia de mi formacion como estudiante de programacion web, se desarrolla una pagina web estatica usando HTML, CSS y JavaScript, Para este caso practico se descidio realizar la pagina de ventas de salida de mercado de el smartboli, un boligrafo inteligente.
 
 ## Idea
 

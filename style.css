@@ -281,13 +281,7 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), select, t
     color: var(--color-secondary);
 }
 
-input[type="submit"]:hover {
-    transform: translateY(-0.1875rem);
-    box-shadow: 0 0.5rem 1.5625rem rgba(56, 189, 248, 0.5);
-    background: linear-gradient(135deg, #0ea5e9, #0369a1);
-}
-
-input[type="submit"] {
+input[type="submit"], #btnAsesoria {
     width: 100%;
     background: linear-gradient(135deg, var(--color-secondary), var(--color-tertiary));
     color: #ffffff;
@@ -302,6 +296,20 @@ input[type="submit"] {
     letter-spacing: 0.0625rem;
     box-shadow: 0 0.25rem 0.9375rem rgba(56, 189, 248, 0.3);
     margin-top: 0.625rem;
+}
+
+#btnAsesoria:disabled {
+    background: var(--color-borde);
+    color: rgba(255, 255, 255, 0.4);
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+input[type="submit"]:not(:disabled):hover, #btnAsesoria:not(:disabled):hover {
+    transform: translateY(-0.1875rem);
+    box-shadow: 0 0.5rem 1.5625rem rgba(56, 189, 248, 0.5);
+    background: linear-gradient(135deg, #0ea5e9, #0369a1);
 }
 .radio-button-container,
 .checkbox-container {

@@ -106,3 +106,53 @@ window.addEventListener("click", function(e) {
 });
 
 
+// Deshabilitar el boton de inicio de sesion hasta que se acepte la politica de privacidad
+
+casilla.addEventListener("change", aceptacionWeb)
+
+function aceptacionWeb() {
+    
+
+    let estadoCasilla=casilla.checked;
+
+    
+    switch (estadoCasilla) {
+
+        case true:   boton1.disabled=false;
+            
+            break;
+        case false:
+                        boton1.disabled=true;
+            break;
+
+        default:
+            break;
+    }
+
+
+};
+
+
+// Deshabilitar el boton de solicitar asesoria hasta que se acepte la politica de privacidad
+
+const casillaAsesoria = document.getElementById("privacidad");
+const botonAsesoria = document.getElementById("btnAsesoria");
+
+if (casillaAsesoria && botonAsesoria) {
+    casillaAsesoria.addEventListener("change", aceptacionAsesoria);
+}
+
+function aceptacionAsesoria() {
+    let estadoCasilla = casillaAsesoria.checked;
+
+    switch (estadoCasilla) {
+        case true:
+            botonAsesoria.disabled = false;
+            break;
+        case false:
+            botonAsesoria.disabled = true;
+            break;
+        default:
+            break;
+    }
+};

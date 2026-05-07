@@ -44,7 +44,7 @@
                 usuarios guardar, editar y compartir sus notas de manera digital y mejorar la experiencia de
                 aprendizaje.</p>
             <br>
-            <img id="imagen" src="/images/450_1000.jpg" alt="Imagen del Smartboli" width="400">
+            <img id="imagen" src="/images/450_1000.jpg" alt="Imagen del Smartboli">
         </section>
 
         <section id="educacion" class="seccion-educativa">
@@ -148,12 +148,22 @@
         <div id="login" class="login-modal desaparecer">
             <div class="modal-content contenedor centrado">
                 <span id="close-modal" class="close-btn">&times;</span>
+                <section id="dos" class="desaparecer" >
+                     <p class="rojo">Logueo rechazado</p>
+                     <button id="btnReintentar">Vuelvalo a intentar</button>
+                </section>
+
                 <section id="uno">
                     <p></p>
-                    <label>Usuario</label><input id="inpt1" type="text" size="10" maxlength="10" value="Pedro">
+                    <label>Usuario</label>
+                    <input id="inpt1" type="text" maxlength="10" value="santi" placeholder="santi">
+                    
                     <p></p>
-                    <label>Contraseña</label><input id="inpt2" type="password" value="246"  size="10" maxlength="10"
-                        value="">
+                    <label>Contraseña</label>
+                    <div class="password-wrapper">
+                        <input id="inpt2" type="password" value="123" maxlength="10" placeholder="123">
+                        <span id="togglePassword" class="material-symbols-outlined">visibility</span>
+                    </div>
 
                     <p>Pon los datos de logueo para entrar en el portal</p>
 
@@ -165,15 +175,8 @@
 
                 </section>
 
-                <section id="dos" class="desaparecer" >
-                     <p class="rojo">Logueo rechazado</p>
-
-                </section>
-
                 <section id="tres" class="desaparecer">
                     <p class="verde">Logueo aceptado</p>
-
-
                 </section>
             </div>
         </div>

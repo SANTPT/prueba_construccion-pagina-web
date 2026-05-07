@@ -110,6 +110,23 @@ nav ul li a:hover {
     text-shadow: none !important;
 }
 
+.btn-logout {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-left: 1rem;
+    transition: color 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-logout:hover {
+    color: #ef4444;
+    text-decoration: underline;
+}
+
 main {
     padding: 2.5rem 1.25rem;
     margin: 0 auto;
@@ -178,6 +195,9 @@ img {
 }
 
 #imagen {
+    max-width: 25rem;
+    width: 100%;
+    height: auto;
     cursor: pointer;
     transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -457,7 +477,6 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), select, t
     }
 }
 
-/* Estilos para el Modal de Login */
 .login-modal {
     position: fixed;
     z-index: 1000;
@@ -473,16 +492,16 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), select, t
 
 .modal-content {
     background-color: var(--color-primary);
-    padding: 3rem;
-    border-radius: 1.25rem;
+    padding: 5rem; /* Aumentado de 3rem */
+    border-radius: 1.5rem;
     border: 0.125rem solid var(--color-borde);
     position: relative;
-    max-width: 28rem;
-    width: 90%;
+    max-width: 45rem; /* Aumentado de 28rem */
+    width: 95%;
     max-height: 90vh;
     overflow-y: auto;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,0.8);
-    text-align: left;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.9);
+    text-align: center; /* Centramos todo el contenido */
 }
 
 .close-btn {
@@ -500,7 +519,7 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), select, t
     color: var(--color-secondary);
 }
 
-/* Clases de utilidad para el logueo */
+
 .desaparecer {
     display: none !important;
 }
@@ -509,14 +528,11 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), select, t
     display: block !important;
 }
 
-/* Regla especial para que el contenedor principal del modal mantenga flex cuando aparece */
 div#login.aparecer {
     display: flex !important;
 }
 
-/* --- ESTILIZANDO EL CONTENIDO HTML ORIGINAL --- */
 
-/* Ocultar las etiquetas <p> vacías innecesarias del html original */
 #login section#uno > p:empty {
     display: none;
 }
@@ -525,24 +541,47 @@ div#login.aparecer {
     display: block;
     font-weight: bold;
     color: var(--color-secondary);
-    margin-bottom: 0.6rem;
-    margin-top: 1.2rem;
-    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem; /* Aumentado */
 }
 
 /* Inputs de texto */
 #login section#uno input[type="text"],
 #login section#uno input[type="password"] {
     width: 100%;
-    padding: 1rem;
+    padding: 1.2rem; /* Aumentado */
     border-radius: 0.5rem;
     border: 0.0625rem solid var(--color-borde);
     background-color: #0d1323;
     color: var(--color-texto);
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Aumentado */
     box-sizing: border-box;
     margin-bottom: 0.5rem;
     transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 3rem !important; /* Espacio para el icono */
+}
+
+#togglePassword {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #94a3b8;
+    user-select: none;
+}
+
+#togglePassword:hover {
+    color: var(--color-secondary);
 }
 
 #login section#uno input[type="text"]:focus,
@@ -605,6 +644,26 @@ div#login.aparecer {
     letter-spacing: 0.08rem;
 }
 
+#btnReintentar {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#btnReintentar:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
 #login button#btn1:disabled {
     background-color: var(--color-borde);
     color: rgba(255, 255, 255, 0.4);
@@ -625,14 +684,14 @@ div#login.aparecer {
 
 #login .rojo {
     color: #ef4444;
-    font-size: 1.8rem;
+    font-size: 2.5rem; /* Aumentado */
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 #login .verde {
     color: #22c55e;
-    font-size: 1.8rem;
+    font-size: 2.5rem; /* Aumentado */
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }

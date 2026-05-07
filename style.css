@@ -410,11 +410,35 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), select, t
         font-size: 3.0rem; 
     }
 
+    .date {
+        position: static;
+        justify-content: center;
+        margin-bottom: 0.75rem;
+    }
+
+    .fecha-demo {
+        text-align: center;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
     .nav-login {
         position: static;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .btn-login {
+        width: fit-content;
         justify-content: center;
+    }
+
+    .btn-logout {
+        margin-left: 0;
+        margin-top: 0.25rem;
     }
 
     nav ul {
@@ -474,6 +498,31 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), select, t
     .iconos-sociales img {
         width: 2.8rem;
         height: 2.8rem;
+    }
+
+    .modal-content {
+        padding: 2.5rem 1.5rem;
+    }
+
+    #login section#uno label {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    #login section#uno input[type="text"],
+    #login section#uno input[type="password"] {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+
+    #login .rojo, #login .verde {
+        font-size: 1.8rem;
+    }
+
+    #login button#btn1 {
+        padding: 0.8rem;
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
     }
 }
 
@@ -627,7 +676,7 @@ div#login.aparecer {
     text-decoration: underline;
 }
 
-/* Botón principal */
+
 #login button#btn1 {
     width: 100%;
     background-color: var(--color-secondary);
@@ -676,7 +725,7 @@ div#login.aparecer {
     transform: translateY(-2px);
 }
 
-/* Mensajes de Resultado */
+
 #login section#dos, #login section#tres {
     text-align: center;
     padding: 2rem 0;
@@ -684,14 +733,14 @@ div#login.aparecer {
 
 #login .rojo {
     color: #ef4444;
-    font-size: 2.5rem; /* Aumentado */
+    font-size: 2.5rem; 
     font-weight: bold;
     margin-bottom: 1.5rem;
 }
 
 #login .verde {
     color: #22c55e;
-    font-size: 2.5rem; /* Aumentado */
+    font-size: 2.5rem; 
     font-weight: bold;
     margin-bottom: 1.5rem;
 }

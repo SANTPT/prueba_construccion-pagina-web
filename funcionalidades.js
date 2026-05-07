@@ -11,9 +11,11 @@ function mostrarFechaHora() {
     let diaSemana = fechaActual.getDay();
     let hora = fechaActual.getHours();
     let minutos = fechaActual.getMinutes();
+    let segundos = fechaActual.getSeconds();
     hora = hora < 10 ? '0' + hora : hora;
     minutos = minutos < 10 ? '0' + minutos : minutos;
-    let horaFormateada = hora + ":" + minutos;
+    segundos = segundos < 10 ? '0' + segundos : segundos;
+    let horaFormateada = hora + ":" + minutos + ":" + segundos;
 
     const castellano = [
         "Domingo",
@@ -31,7 +33,7 @@ function mostrarFechaHora() {
 }
 mostrarFechaHora();
 
-setInterval(mostrarFechaHora, 60000);
+setInterval(mostrarFechaHora, 1000);
 //Primera funcionalidad Login de acceso a la plataforma Smartboli
 const caja1=document.getElementById("inpt1");
 const caja2=document.getElementById("inpt2");
@@ -43,7 +45,7 @@ const cajaUno=document.getElementById("uno");
 const cajaDos=document.getElementById("dos");
 const cajaTres=document.getElementById("tres");
 
-const boton3=document.getElementById("btn3");
+
 
 //Primera funcionalidad Login de acceso a la plataforma Smartboli
 
@@ -108,7 +110,6 @@ window.addEventListener("click", function(e) {
 
 // Deshabilitar el boton de inicio de sesion hasta que se acepte la politica de privacidad
 
-// Función genérica para vincular cualquier casilla con cualquier botón
 function vincularPrivacidad(checkboxItem, buttonItem) {
     if (checkboxItem && buttonItem) {
         checkboxItem.addEventListener("change", (e) => {
@@ -124,3 +125,25 @@ vincularPrivacidad(casilla, boton1);
 const casillaAsesoria = document.getElementById("privacidad");
 const botonAsesoria = document.getElementById("btnAsesoria");
 vincularPrivacidad(casillaAsesoria, botonAsesoria);
+
+// Funcionalidad de intercambio de imagen (Hover continuo + Click para fijar)
+const fotoSmartboli = document.getElementById("imagen");
+let imagenBase = "/images/450_1000.jpg";
+let imagenAlternativa = "/images/450_1001.jpg";
+
+if (fotoSmartboli) {
+    // Siempre cambia al entrar
+    fotoSmartboli.addEventListener("mouseover", () => {
+        fotoSmartboli.setAttribute("src", imagenAlternativa);
+    });
+
+    fotoSmartboli.addEventListener("mouseout", () => {
+        fotoSmartboli.setAttribute("src", imagenBase);
+    });
+
+    fotoSmartboli.addEventListener("click", () => {
+        let temporal = imagenBase;
+        imagenBase = imagenAlternativa;
+        imagenAlternativa = temporal;
+    });
+}

@@ -177,6 +177,17 @@ img {
     margin-right: auto;
 }
 
+#imagen {
+    cursor: pointer;
+    transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#imagen:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.5);
+    border-color: var(--color-secondary);
+}
+
 .precio-destacado {
     display: flex;
     justify-content: center;
@@ -281,7 +292,7 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), select, t
     color: var(--color-secondary);
 }
 
-input[type="submit"], #btnAsesoria {
+#btnAsesoria {
     width: 100%;
     background: linear-gradient(135deg, var(--color-secondary), var(--color-tertiary));
     color: #ffffff;
@@ -306,7 +317,7 @@ input[type="submit"], #btnAsesoria {
     transform: none;
 }
 
-input[type="submit"]:not(:disabled):hover, #btnAsesoria:not(:disabled):hover {
+#btnAsesoria:not(:disabled):hover {
     transform: translateY(-0.1875rem);
     box-shadow: 0 0.5rem 1.5625rem rgba(56, 189, 248, 0.5);
     background: linear-gradient(135deg, #0ea5e9, #0369a1);
@@ -457,7 +468,7 @@ input[type="submit"]:not(:disabled):hover, #btnAsesoria:not(:disabled):hover {
     background-color: rgba(0, 0, 0, 0.75);
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(4px); /* Toque premium de desenfoque */
+    backdrop-filter: blur(4px);
 }
 
 .modal-content {
@@ -624,21 +635,4 @@ div#login.aparecer {
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 1rem;
-}
-
-#login button#btn3 {
-    background-color: #22c55e;
-    color: white;
-    font-weight: bold;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 1rem;
-}
-
-#login button#btn3:hover {
-    background-color: #16a34a;
 }

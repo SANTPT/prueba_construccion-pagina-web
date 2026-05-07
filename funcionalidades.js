@@ -9,9 +9,16 @@ function mostrarFechaHora() {
 
     const fechaActual = new Date();
     let diaSemana = fechaActual.getDay();
+    let diaDelMes = fechaActual.getDate();
+    const meses = [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    ];
+    let nombreMes = meses[fechaActual.getMonth()];
     let hora = fechaActual.getHours();
     let minutos = fechaActual.getMinutes();
     let segundos = fechaActual.getSeconds();
+    let fechaFormateada = diaDelMes + " de " + nombreMes;
     hora = hora < 10 ? '0' + hora : hora;
     minutos = minutos < 10 ? '0' + minutos : minutos;
     segundos = segundos < 10 ? '0' + segundos : segundos;
@@ -29,7 +36,7 @@ function mostrarFechaHora() {
     
     let nombreDia = castellano[diaSemana];
     
-    salidaDatos.innerHTML = nombreDia + " " + horaFormateada;
+    salidaDatos.innerHTML = nombreDia + " " + fechaFormateada + " " + horaFormateada;
 }
 mostrarFechaHora();
 
